@@ -1,0 +1,44 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+
+  .link {
+    position: relative;
+    font-family: 'Lexend Giga', sans-serif;
+    font-size: 32px;
+    line-height: 140%;
+    text-align: center;
+    color: #373737;
+    text-decoration: none;
+  }
+
+  .link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    -webkit-transition: width 0.35s;
+    -o-transition: width 0.35s;
+    transition: width 0.35s;
+  }
+
+  .link:hover {
+    color: white;
+  }
+
+  .link:hover:before {
+    width: 100%;
+  }
+}

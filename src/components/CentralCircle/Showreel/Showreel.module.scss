@@ -1,0 +1,59 @@
+.container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  .text:hover {
+    -webkit-animation: textRotate 20s linear infinite;
+            animation: textRotate 20s linear infinite;
+  }
+
+  .dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #000000;
+  }
+
+  @-webkit-keyframes textRotate {
+    0% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+    100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+   }
+
+  @keyframes textRotate {
+    0% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+    100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+   }
+}
+
+@media all and (max-width: 1024px) {
+  .container {
+    .text {
+      height: 108px;
+      width: 110px;
+    }
+  }
+}
+
+@media all and (max-width: 650px) {
+  .container {
+    bottom: -55px;
+    right: 40px;
+
+    .text {
+      height: 87px;
+      width: 88px;
+    }
+
+    .dot {
+      height: 6px;
+      width: 6px;
+    }
+  }
+}

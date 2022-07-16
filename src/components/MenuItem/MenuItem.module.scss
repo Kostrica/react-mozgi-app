@@ -1,0 +1,89 @@
+.container {
+  padding: 19px;
+
+  .verticalTop,
+  .verticalBottom,
+  .horizontal {
+    position: relative;
+    font-family: 'Lexend Giga', sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: #373737;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .verticalTop,
+  .verticalBottom {
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      height: 0;
+      width: 2px;
+      background-color: white;
+      -webkit-transition: height 0.35s;
+      -o-transition: height 0.35s;
+      transition: height 0.35s;
+    }
+  }
+
+  .verticalTop {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+
+  .horizontal::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    -webkit-transition: width 0.35s;
+    -o-transition: width 0.35s;
+    transition: width 0.35s;
+  }
+
+  .horizontal:hover:before {
+    width: 100%;
+  }
+
+  .verticalTop,
+  .verticalBottom {
+    &:hover:before {
+      height: 100%;
+    }
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .container {
+    .verticalTop,
+    .verticalBottom,
+    .horizontal {
+      font-size: 14px;
+    }
+  }
+}
+
+@media all and (max-width: 650px) {
+  .container {
+    .verticalTop,
+    .verticalBottom,
+    .horizontal {
+      display: none;
+    }
+  }
+}

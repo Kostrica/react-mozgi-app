@@ -1,0 +1,106 @@
+.container {
+  position: relative;
+  top: 28px;
+  left: 24px;
+  height: 38px;
+  width: 38px;
+
+  .tongueContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .tongueMenu {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+
+    .buttonEn,
+    .buttonUa {
+      border: none;
+      background: none;
+      font-family: 'Lexend Giga', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 140%;
+      color: #373737;
+      text-align: center;
+      text-transform: uppercase;
+      opacity: 0;
+    
+      &:hover {
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+
+  &:hover .tongueMenu {
+    left: 80px;
+    -webkit-transition: left 1.5s;
+    -o-transition: left 1.5s;
+    transition: left 1.5s;
+  }
+
+  &:hover .buttonEn {
+    opacity: 1;
+    -webkit-transition: opacity 0.7s 0.6s;
+    -o-transition: opacity 0.7s 0.6s;
+    transition: opacity 0.7s 0.6s;
+  }
+
+  &:hover .buttonUa {
+    opacity: 1;
+    -webkit-transition: opacity 1.2s;
+    -o-transition: opacity 1.2s;
+    transition: opacity 1.2s;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .container {
+    height: 34px;
+    width: 34px;
+
+    .tongueContainer {
+      .tongue {
+        height: 15px;
+      }
+    }
+
+    .buttonEn,
+    .buttonUa {
+      font-size: 14px;
+    }
+  }
+}
