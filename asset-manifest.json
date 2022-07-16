@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-mozgi-app/static/css/main.1e59b0a2.css",
-    "main.js": "/react-mozgi-app/static/js/main.c1447a8e.js",
+    "main.js": "/react-mozgi-app/static/js/main.42494889.js",
     "static/media/showreel.svg": "/react-mozgi-app/static/media/showreel.7201f19c900724a70102064aa5edd321.svg",
     "static/media/menu.svg": "/react-mozgi-app/static/media/menu.2a7fc5467ee6018f65da6b83463c414c.svg",
     "index.html": "/react-mozgi-app/index.html",
     "main.1e59b0a2.css.map": "/react-mozgi-app/static/css/main.1e59b0a2.css.map",
-    "main.c1447a8e.js.map": "/react-mozgi-app/static/js/main.c1447a8e.js.map"
+    "main.42494889.js.map": "/react-mozgi-app/static/js/main.42494889.js.map"
   },
   "entrypoints": [
     "static/css/main.1e59b0a2.css",
-    "static/js/main.c1447a8e.js"
+    "static/js/main.42494889.js"
   ]
 }
